@@ -1,0 +1,156 @@
+/* Define light and dark mode variables */
+:root {
+  --bg-color-light: #ffffff;
+  --bg-color-dark: #121212;
+  --text-color-light: #333333;
+  --text-color-dark: #f0f0f0;
+  --button-bg-light: #4caf50;
+  --button-bg-dark: #80e27e;
+  --remove-btn-light: #e53935;
+  --remove-btn-dark: #ff5252;
+}
+
+/* Default theme - Light mode */
+body {
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Todo List Container */
+.todo-list-container {
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: var(--bg-color-light);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .todo-list-container {
+  background-color: var(--bg-color-dark);
+}
+
+/* Title styles */
+.todo-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input field style */
+.todo-input {
+  width: 95.5%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.todo-input:focus {
+  border-color: #4caf50;
+}
+
+body.dark-mode .todo-input {
+  border-color: #444;
+  background-color: #555;
+  color: white;
+}
+
+/* Button style */
+.add-task-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--button-bg-light);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task-btn:hover {
+  background-color: #45a049;
+}
+
+body.dark-mode .add-task-btn {
+  background-color: var(--button-bg-dark);
+}
+
+body.dark-mode .add-task-btn:hover {
+  background-color: #66bb6a;
+}
+
+/* List of tasks */
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+body.dark-mode .todo-item {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .todo-item:hover {
+  background-color: #555;
+}
+
+/* Remove button style */
+.remove-task-btn {
+  background-color: var(--remove-btn-light);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.remove-task-btn:hover {
+  background-color: #e53935;
+}
+
+body.dark-mode .remove-task-btn {
+  background-color: var(--remove-btn-dark);
+}
+
+body.dark-mode .remove-task-btn:hover {
+  background-color: #f44336;
+}
+
+/* Dark mode toggle button */
+.toggle-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #005bb5;
+}
