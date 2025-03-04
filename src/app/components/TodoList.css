@@ -2,12 +2,15 @@
 :root {
   --bg-color-light: #ffffff;
   --bg-color-dark: #121212;
+  --bg-color-darksecondary: #1e1e1e;
   --text-color-light: #333333;
   --text-color-dark: #f0f0f0;
   --button-bg-light: #4caf50;
   --button-bg-dark: #80e27e;
   --remove-btn-light: #e53935;
   --remove-btn-dark: #ff5252;
+  --task-bg-light: #f4f4f4;
+  --task-bg-dark: #333333;
 }
 
 /* Default theme - Light mode */
@@ -24,7 +27,7 @@ body.dark-mode {
 
 /* Todo List Container */
 .todo-list-container {
-  padding: 40px;
+  padding: 20px;
   max-width: 500px;
   margin: 0 auto;
   background-color: var(--bg-color-light);
@@ -34,7 +37,7 @@ body.dark-mode {
 }
 
 body.dark-mode .todo-list-container {
-  background-color: var(--bg-color-dark);
+  background-color: var(--bg-color-darksecondary);
 }
 
 /* Title styles */
@@ -103,6 +106,7 @@ body.dark-mode .add-task-btn:hover {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   font-size: 18px;
+  background-color: var(--task-bg-light);
 }
 
 .todo-item:last-child {
@@ -110,12 +114,8 @@ body.dark-mode .add-task-btn:hover {
 }
 
 body.dark-mode .todo-item {
-  background-color: #444;
+  background-color: var(--task-bg-dark);
   color: white;
-}
-
-body.dark-mode .todo-item:hover {
-  background-color: #555;
 }
 
 /* Remove button style */
